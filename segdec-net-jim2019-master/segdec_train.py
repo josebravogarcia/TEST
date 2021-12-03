@@ -11,7 +11,7 @@ from datetime import datetime
 
 import numpy as np
 import pylab as plt
-from tensorflow.contrib import slim
+#from tensorflow.contrib import slim
 
 from input_data.image_processing import NetInputProcessing
 
@@ -241,7 +241,7 @@ class SegDecTrain(object):
           with tf.device('/gpu:%d' % i):
             with tf.name_scope('%s_%d' % (self.TOWER_NAME, i)) as scope:
               # Force all Variables to reside on the CPU.
-              with slim.arg_scope([slim.variable], device='/cpu:0'):
+              #with slim.arg_scope([slim.variable], device='/cpu:0'):
                 # Calculate the loss for one tower of the ImageNet model. This
                 # function constructs the entire ImageNet model but shares the
                 # variables across all towers.

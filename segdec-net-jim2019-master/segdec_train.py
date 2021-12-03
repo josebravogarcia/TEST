@@ -245,7 +245,7 @@ class SegDecTrain(object):
                 # Calculate the loss for one tower of the ImageNet model. This
                 # function constructs the entire ImageNet model but shares the
                 # variables across all towers.
-                loss = self._tower_loss(images_splits[i], masks_splits[i], num_classes,
+              loss = self._tower_loss(images_splits[i], masks_splits[i], num_classes,
                                    scope, reuse_variables)
 
               # Reuse variables for the next tower.
